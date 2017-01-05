@@ -11,7 +11,8 @@ var emoji = require('node-emoji');
   var emojiArray = [];
 
   for (var i = 0; i <= 20; i++) {
-    emojiArray.push(emoji.random());
+    emojiArray.push(emoji.random().emoji);   //emoji.random() returns an object with two key / value pairs
+                                             // so use the property name 'emoji' to just print the emoji
   }
 
   for (var i = 0; i < emojiArray.length; i++) {
