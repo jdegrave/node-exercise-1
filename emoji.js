@@ -5,12 +5,16 @@ var emoji = require('node-emoji');
 // emoji.emojify('I :heart: :coffee:!') // replaces all :emoji: with the actual emoji, in this case: returns "I ❤️ ☕️!"
 //emoji.random() // returns a random emoji + key, e.g. `{ emoji: '❤️', key: 'heart' }`
 
-var emojiArray = [];
 
-for (var i = 0; i <= 20; i++) {
-  emojiArray.push(emoji.random());
-}
+(function printEmoji () {
 
-for (var i = 0; i < emojiArray.length; i++) {
-  console.log(emojiArray[i]);
-}
+  var emojiArray = [];
+
+  for (var i = 0; i <= 20; i++) {
+    emojiArray.push(emoji.random());
+  }
+
+  for (var i = 0; i < emojiArray.length; i++) {
+    console.log(emojiArray[i]);
+  }
+})();
